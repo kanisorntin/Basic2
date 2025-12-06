@@ -1,36 +1,37 @@
 #include <stdio.h>
 
 int main(){
-    int score;
-    int countA = 0,countB = 0, countC = 0, countD = 0, countF = 0;
+    int mark;
+    int numA = 0,numB = 0, numC = 0, numD = 0, numF = 0;
 
-    if(scanf("%d", &score) != 1){
+    if(scanf("%d", &mark) != 1){
         return 1;
     }
 
-    while (score != -1){
-        if (score >= 80) {
-            countA++; 
-        } else if (score >= 70) {
-            countB++; 
-        } else if (score >= 60) {
-            countC++; 
-        } else if (score >= 50) {
-            countD++; 
-        } else {
-            countF++;
+       while ( 1 ){
+        if (mark == -1){
+            break;
         }
-
-        if(scanf("%d", &score) != 1){
+        if (mark >= 80) {
+            numA++; 
+        } else if (mark >= 70) {
+            numB++; 
+        } else if (mark >= 60) {
+            numC++; 
+        } else if (mark >= 50) {
+            numD++; 
+        } else {
+            numF++;
+        }
+        if(scanf("%d", &mark) != 1){
             break;
         }
     }
-
-    printf("Grade A Count: %d\n", countA);
-    printf("Grade B Count: %d\n", countB);
-    printf("Grade C Count: %d\n", countC);
-    printf("Grade D Count: %d\n", countD);
-    printf("Grade F Count: %d\n", countF);
+    printf("Grade A Count: %d\n", numA);
+    printf("Grade B Count: %d\n", numB);
+    printf("Grade C Count: %d\n", numC);
+    printf("Grade D Count: %d\n", numD);
+    printf("Grade F Count: %d\n", numF);
     return 0;
 
 }
